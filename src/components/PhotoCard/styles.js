@@ -25,12 +25,3 @@ export const Img = styled.img`
   width: 100%;
   margin-top: 20px;
 `;
-
-export const Button = styled.button`
-  display: flex;
-  align-items: center;
-  padding-top: 8px;
-  & svg {
-    margin-right: 4px;
-  }
-`;
