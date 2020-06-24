@@ -1,13 +1,14 @@
-import React, { Fragment } from "react";
+import React from "react";
 
 import { ListOfPhotoCards } from "../container/ListOfPhotoCards";
 import { ListOfCategories } from "../components/ListOfCategories";
+import { Layout } from "../components/Layout";
 
 export const Home = ({ id }) => {
   return (
-    <Fragment>
+    <Layout>
       <ListOfCategories />
       <ListOfPhotoCards categoryId={id} />
-    </Fragment>
+    </Layout>
   );
 };
