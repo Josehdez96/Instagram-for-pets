@@ -4,6 +4,9 @@ const WorkboxWebpackPlugin = require("workbox-webpack-plugin");
 const path = require("path");
 
 module.exports = {
+  entry: {
+    home: path.resolve(__dirname, "src/index.tsx"),
+  },
   output: {
     filename: "app.bundle.js",
     publicPath: "/",
@@ -52,11 +55,16 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.(js|jsx)$/,
+        test: /\.(ts|tsx)$/,
         exclude: /node_modules/,
-        use: {
-          loader: "babel-loader",
-        },
+        use: [
+          {
+            loader: "babel-loader",
+          },
+          {
+            loader: "ts-loader",
+          },
+        ],
       },
     ],
   },

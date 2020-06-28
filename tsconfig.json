@@ -1,0 +1,13 @@
+{
+    "compilerOptions": {
+        "jsx": "react",
+        "module": "es2020",
+        "outDir": "src/js",
+        "allowJs": true,
+        "target": "es5",
+        "allowSyntheticDefaultImports": true,
+        "moduleResolution": "node",
+        "traceResolution": true
+    },
+    "include": ["./src/**/*"]
+}
