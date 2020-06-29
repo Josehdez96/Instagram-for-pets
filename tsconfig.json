@@ -1,0 +1,12 @@
+{
+    "compilerOptions": {
+        "jsx": "react",
+        "module": "es2020",
+        "outDir": "js",
+        "allowJs": true,
+        "target": "es5",
+        "allowSyntheticDefaultImports": true,
+        "moduleResolution": "node"
+    },
+    "include": ["./src/**/*"]
+}

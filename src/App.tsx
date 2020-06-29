@@ -18,26 +18,26 @@ const Favs = React.lazy(() => import("./pages/Favs"));
 const User = React.lazy(() => import("./pages/User"));
 
 export const App = () => {
-  const { isAuth } = useContext(Context);
+    const isAuth = useContext(Context);
 
-  return (
-    <Suspense fallback={<div />}>
-      <GlobalStyle />
-      <Logo />
-      <Router>
-        <NotFound default />
-        <Home path="/" />
-        <Home path="/pet/:id" />
-        <Detail path="/detail/:detailId" />
-        {!isAuth && <NotRegisteredUser path="/login" />}
-        {!isAuth && <Redirect noThrow from="/favs" to="/login" />}
-        {!isAuth && <Redirect noThrow from="/user" to="/login" />}
-        {isAuth && <Redirect noThrow from="/login" to="/" />}
+    return (
+        <Suspense fallback={<div />}>
+            <GlobalStyle />
+            <Logo />
+            <Router>
+                <NotFound default />
+                <Home path="/" />
+                <Home path="/pet/:id" />
+                <Detail path="/detail/:detailId" />
+                {!isAuth && <NotRegisteredUser path="/login" />}
+                {!isAuth && <Redirect noThrow from="/favs" to="/login" />}
+                {!isAuth && <Redirect noThrow from="/user" to="/login" />}
+                {isAuth && <Redirect noThrow from="/login" to="/" />}
 
-        <Favs path="/favs" />
-        <User path="/user" />
-      </Router>
-      <NavBar />
-    </Suspense>
-  );
+                <Favs path="/favs" />
+                <User path="/user" />
+            </Router>
+            <NavBar />
+        </Suspense>
+    );
 };
