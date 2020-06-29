@@ -7,7 +7,7 @@
         "target": "es5",
         "allowSyntheticDefaultImports": true,
         "moduleResolution": "node",
-        "traceResolution": true
+        "traceResolution": false
     },
     "include": ["./src/**/*"]
 }
