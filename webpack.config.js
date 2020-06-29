@@ -5,7 +5,7 @@ const path = require("path");
 
 module.exports = {
   entry: {
-    home: path.resolve(__dirname, "src/js/index.js"),
+    home: path.resolve(__dirname, "js/index.js"),
   },
   output: {
     filename: "app.bundle.js",
@@ -13,7 +13,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: "src/index.html",
+      template: "js/index.html",
     }),
     new WebpackPwaManifestPlugin({
       name: "Petgram - App de fotos mascotas",

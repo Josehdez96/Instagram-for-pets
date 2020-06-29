@@ -18,7 +18,7 @@ const Favs = React.lazy(() => import("./pages/Favs"));
 const User = React.lazy(() => import("./pages/User"));
 
 export const App = () => {
-    const { isAuth } = useContext(Context);
+    const isAuth = useContext(Context);
 
     return (
         <Suspense fallback={<div />}>
